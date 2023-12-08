@@ -1,0 +1,1916 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>981</width>
+    <height>692</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Digital Signal Processing</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>971</width>
+      <height>671</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page_1">
+     <widget class="QTabWidget" name="p1_tabWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>971</width>
+        <height>461</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="p1_tab_1">
+       <attribute name="title">
+        <string>Task 1</string>
+       </attribute>
+       <widget class="QGroupBox" name="p1_t1_groupBox">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>10</y>
+          <width>521</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="title">
+         <string>Choose Input Type</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QRadioButton" name="p1_t1_radioButton_manual">
+           <property name="text">
+            <string>Manual Signal Generation</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="p1_t1_radioButton_readFile">
+           <property name="text">
+            <string>Read Signal From File</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QFrame" name="p1_t1_f1_manual">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>80</y>
+          <width>381</width>
+          <height>341</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame { 
+	background: #f2f2f2;
+ 	border: 1px solid #b3b3b3; 
+} </string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="p1_t1_f1_btn_generationGraph">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>290</y>
+           <width>140</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Generation Graph</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="p1_t1_f1_label_">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>30</y>
+           <width>120</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0;</string>
+         </property>
+         <property name="text">
+          <string>Signal Type:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="p1_t1_f1_label_1">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>80</y>
+           <width>120</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0;</string>
+         </property>
+         <property name="text">
+          <string>Amplitude:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="p1_t1_f1_label_2">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>130</y>
+           <width>120</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0;</string>
+         </property>
+         <property name="text">
+          <string>Analog Frequency:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="p1_t1_f1_label_3">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>180</y>
+           <width>120</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0;</string>
+         </property>
+         <property name="text">
+          <string>Sampling Frequency:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="p1_t1_f1_label_4">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>230</y>
+           <width>120</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0;</string>
+         </property>
+         <property name="text">
+          <string>Phase Shift:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="p1_t1_f1_lineEdit_amplitude">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>80</y>
+           <width>200</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="p1_t1_f1_lineEdit_analogFrequency">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>130</y>
+           <width>200</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="p1_t1_f1_lineEdit_samplingFrequency">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>180</y>
+           <width>200</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="p1_t1_f1_lineEdit_phaseShift">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>230</y>
+           <width>200</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="p1_t1_f1_comboBox_signalType">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>30</y>
+           <width>200</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <item>
+          <property name="text">
+           <string>Choose Type</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>cos</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>sin</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="p1_t1_f2_readFile">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>80</y>
+          <width>381</width>
+          <height>341</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame { 
+	background: #f2f2f2;
+ 	border: 1px solid #b3b3b3; 
+} </string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLineEdit" name="p1_t1_f2_flineEdit_filePath">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>120</y>
+           <width>311</width>
+           <height>30</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="p1_t1_f2_btn_openFile">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>160</y>
+           <width>140</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Open Signal File</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="p1_t1_f2_btn_generationGraph">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>160</y>
+           <width>140</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Generation Graph</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="p1_tab_2">
+       <attribute name="title">
+        <string>Task 2</string>
+       </attribute>
+       <widget class="QPushButton" name="p1_t2_btn_openFile">
+        <property name="geometry">
+         <rect>
+          <x>640</x>
+          <y>80</y>
+          <width>140</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Open Signal File</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="p1_t2_flineEdit_filePath">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>80</y>
+          <width>485</width>
+          <height>30</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t2_btn_generateGraph">
+        <property name="geometry">
+         <rect>
+          <x>800</x>
+          <y>80</y>
+          <width>140</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Generate Graph</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="p1_t2_flineEdit_filePath_2">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>150</y>
+          <width>485</width>
+          <height>30</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t2_btn_generateGraph_2">
+        <property name="geometry">
+         <rect>
+          <x>800</x>
+          <y>150</y>
+          <width>140</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Generate Graph</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t2_btn_openFile_2">
+        <property name="geometry">
+         <rect>
+          <x>640</x>
+          <y>150</y>
+          <width>140</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Open Signal File</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="p1_t2_labelText">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>80</y>
+          <width>81</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Signal 1:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="p1_t2_labelText_2">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>150</y>
+          <width>81</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Signal 2:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="p1_t2_comboBox_operation">
+        <property name="geometry">
+         <rect>
+          <x>39</x>
+          <y>280</y>
+          <width>451</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>Choose Operation ....</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Addition (S1+S2)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Subtraction (S1-S2)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Multiplication (S1*S2)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Multiplication (S1 *x)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Power (S1 ^x)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shifting (S1 +-  x)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Normalization (S1 =&gt; x~y)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Accumulation (S1)</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="p1_t2_labelText_3">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>250</y>
+          <width>81</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Operation:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t2_btn_generateGraph_result">
+        <property name="geometry">
+         <rect>
+          <x>800</x>
+          <y>280</y>
+          <width>140</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Generate Graph</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="p1_t2_flineEdit_x">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>280</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="p1_t2_flineEdit_y">
+        <property name="geometry">
+         <rect>
+          <x>660</x>
+          <y>280</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+       </widget>
+       <widget class="QLabel" name="p1_t2_labelText_4">
+        <property name="geometry">
+         <rect>
+          <x>540</x>
+          <y>250</y>
+          <width>81</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>X</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="p1_t2_labelText_5">
+        <property name="geometry">
+         <rect>
+          <x>680</x>
+          <y>250</y>
+          <width>81</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Y</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="p1_tab_3">
+       <attribute name="title">
+        <string>Task 3</string>
+       </attribute>
+       <widget class="QPushButton" name="p1_t3_btn_openFile">
+        <property name="geometry">
+         <rect>
+          <x>630</x>
+          <y>20</y>
+          <width>140</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Open Signal File</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="p1_t3_labelText">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>81</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Signal Path:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="p1_t3_flineEdit_filePath">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>20</y>
+          <width>480</width>
+          <height>30</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t3_btn_generateGraph">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>20</y>
+          <width>140</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Generate Graph</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="p1_t3_flineEdit_levels">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>70</y>
+          <width>100</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+       </widget>
+       <widget class="QLabel" name="p1_t3_labelText_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>70</y>
+          <width>90</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Input Type:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="p1_t3_comboBox_inputType">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>70</y>
+          <width>200</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>Choose Type ....</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Number Of Levels :</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Size In Bits :</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QPushButton" name="p1_t3_btn_generateTable">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>70</y>
+          <width>140</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Generate Table</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t3_btn_clearTable">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>70</y>
+          <width>140</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ClearTable</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="p1_t3_tableWidget">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>120</y>
+          <width>900</width>
+          <height>290</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>120</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>n</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>X(n)</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Interval Index</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Encoded Value</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Xq(n)</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>eq(n) = Xq(n) - X(n)</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>eq(n)^2</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="p1_t3_btn_generateGraph_2">
+        <property name="geometry">
+         <rect>
+          <x>630</x>
+          <y>70</y>
+          <width>140</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Generate Graph</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="p1_tab_4">
+       <attribute name="title">
+        <string>Task 4</string>
+       </attribute>
+       <widget class="QLineEdit" name="p1_t4_flineEdit_filePath">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>30</y>
+          <width>440</width>
+          <height>30</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t4_btn_openFile">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>30</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Open Signal File</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="p1_t4_tableWidget">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>130</y>
+          <width>541</width>
+          <height>290</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>220</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Index</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Frequency</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QLabel" name="p1_t4_labelText">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>30</y>
+          <width>81</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Signal Path:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t4_btn_generateTable">
+        <property name="geometry">
+         <rect>
+          <x>700</x>
+          <y>30</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Generate Table</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t4_btn_DFT">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>90</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>DFT</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t4_btn_IDFT">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>80</y>
+          <width>80</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>IDFT</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t4_btn_saveTextFile">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>80</y>
+          <width>140</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Save Text File</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="p1_t4_flineEdit_fileName">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>80</y>
+          <width>140</width>
+          <height>30</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QFrame" name="p1_t4_f1">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>80</y>
+          <width>381</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame { 
+	background: #f2f2f2;
+ 	border: 1px solid #b3b3b3; 
+} </string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="p1_t4_f1_labelText">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>170</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0;</string>
+         </property>
+         <property name="text">
+          <string>Sampling Frequency in Hz:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="p1_t4_f1_flineEdit_sampleFreq">
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>20</y>
+           <width>161</width>
+           <height>30</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="p1_t4_f1_btn_generateGraph">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>80</y>
+           <width>170</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Generate Graph</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="p1_t4_f2">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>230</y>
+          <width>381</width>
+          <height>190</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame { 
+	background: #f2f2f2;
+ 	border: 1px solid #b3b3b3; 
+} </string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="p1_t4_f2_labelText_1">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>120</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0;</string>
+         </property>
+         <property name="text">
+          <string>Sample Number:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="p1_t4_f2_flineEdit_sampleNumber">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>20</y>
+           <width>210</width>
+           <height>30</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="p1_t4_f2_btn_generateTable">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>150</y>
+           <width>170</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Re-Generate Table</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="p1_t4_f2_labelText_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>60</y>
+           <width>120</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0;</string>
+         </property>
+         <property name="text">
+          <string>New Amplitude:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="p1_t4_f2_flineEdit_amplitude">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>60</y>
+           <width>210</width>
+           <height>30</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="p1_t4_f2_labelText_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>100</y>
+           <width>120</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0;</string>
+         </property>
+         <property name="text">
+          <string>New Phase Shift:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="p1_t4_f2_flineEdit_phaseShift">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>100</y>
+           <width>210</width>
+           <height>30</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="p1_t4_btn_clearTable">
+        <property name="geometry">
+         <rect>
+          <x>830</x>
+          <y>30</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ClearTable</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="p1_tab_5">
+       <attribute name="title">
+        <string>Task 5</string>
+       </attribute>
+       <widget class="QPushButton" name="p1_t5_btn_generateTable">
+        <property name="geometry">
+         <rect>
+          <x>700</x>
+          <y>20</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Generate Table</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t5_btn_clearTable">
+        <property name="geometry">
+         <rect>
+          <x>830</x>
+          <y>20</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ClearTable</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t5_btn_RemoveDC">
+        <property name="geometry">
+         <rect>
+          <x>770</x>
+          <y>80</y>
+          <width>185</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Remove DC</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="p1_t5_flineEdit_filePath">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>20</y>
+          <width>440</width>
+          <height>30</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t5_btn_DCT">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>80</y>
+          <width>185</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>DCT</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="p1_t5_labelText">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>81</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Signal Path:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t5_btn_openFile">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>20</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Open Signal File</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="p1_t5_tableWidget">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>541</width>
+          <height>330</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>220</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Index</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Frequency</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QFrame" name="p1_t5_f1">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>130</y>
+          <width>381</width>
+          <height>170</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame { 
+	background: #f2f2f2;
+ 	border: 1px solid #b3b3b3; 
+} </string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="p1_t5_f1_btn_saveTextFile">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>120</y>
+           <width>160</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Save Text File</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="p1_t5_f1_labelText_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>70</y>
+           <width>130</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0;</string>
+         </property>
+         <property name="text">
+          <string>Number Of Samples:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="p1_t5_f1_labelText_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>130</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0;</string>
+         </property>
+         <property name="text">
+          <string>File Name:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="p1_t5_f1_flineEdit_fileName">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>20</y>
+           <width>200</width>
+           <height>30</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="p1_t5_f1_flineEdit_numberSamples">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>70</y>
+           <width>200</width>
+           <height>30</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="p1_tab_6">
+       <attribute name="title">
+        <string>Task 6</string>
+       </attribute>
+       <widget class="QLabel" name="p1_t6_labelText">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>81</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Signal Path:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t6_btn_openFile">
+        <property name="geometry">
+         <rect>
+          <x>820</x>
+          <y>20</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Open Signal File</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="p1_t6_flineEdit_filePath">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>20</y>
+          <width>700</width>
+          <height>30</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t6_btn_clearTable">
+        <property name="geometry">
+         <rect>
+          <x>820</x>
+          <y>330</y>
+          <width>120</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ClearTable</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="p1_t6_labelText_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>81</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Operation:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="p1_t6_comboBox_operation">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>80</y>
+          <width>520</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>Choose Operation ....</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Smothing Signal (window size = X)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Sharpening Signal (using first derivative)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Sharpening Signal (using second derivative)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Delay or Advance Signal by X vaule</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Folding Signal </string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Delay or Advance Folded Signal by X vaule</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Remove DC component (using avarege)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Remove DC component (using DFT&amp;IDFT)</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLineEdit" name="p1_t6_flineEdit_x">
+        <property name="geometry">
+         <rect>
+          <x>710</x>
+          <y>80</y>
+          <width>230</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="p1_t6_tableWidget">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>130</y>
+          <width>790</width>
+          <height>280</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>180</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Index-Before</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Frequency-Before</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Index-After</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Frequency-After</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="p1_t6_btn_generateTable">
+        <property name="geometry">
+         <rect>
+          <x>820</x>
+          <y>130</y>
+          <width>120</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Generate Table</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t6_btn_generateGraph">
+        <property name="geometry">
+         <rect>
+          <x>820</x>
+          <y>230</y>
+          <width>120</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Generate Graph</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="p1_t6_labelText_3">
+        <property name="geometry">
+         <rect>
+          <x>680</x>
+          <y>80</y>
+          <width>20</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>X:</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="p1_tab_7">
+       <attribute name="title">
+        <string>Task 7</string>
+       </attribute>
+       <widget class="QPushButton" name="p1_t7_btn_openFile">
+        <property name="geometry">
+         <rect>
+          <x>820</x>
+          <y>30</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Open Signal File</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="p1_t7_labelText">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>110</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Signal 1th Path:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="p1_t7_flineEdit_filePath">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>30</y>
+          <width>680</width>
+          <height>30</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="p1_t7_labelText_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>110</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Signal 2th Path:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="p1_t7_flineEdit_filePath_2">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>80</y>
+          <width>680</width>
+          <height>30</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t7_btn_openFile_2">
+        <property name="geometry">
+         <rect>
+          <x>820</x>
+          <y>80</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Open Signal File</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t7_btn_generateTable">
+        <property name="geometry">
+         <rect>
+          <x>820</x>
+          <y>130</y>
+          <width>120</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Generate Table</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t7_btn_clearTable">
+        <property name="geometry">
+         <rect>
+          <x>820</x>
+          <y>330</y>
+          <width>120</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ClearTable</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="p1_t7_tableWidget">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>130</y>
+          <width>790</width>
+          <height>280</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>125</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Index-Signal</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Frequency-Signal</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Index-Filter</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Frequency-Filter</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Index-Final</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Frequency-Final</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="p1_t7_btn_generateGraph">
+        <property name="geometry">
+         <rect>
+          <x>820</x>
+          <y>230</y>
+          <width>120</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Generate Graph</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="p_tab_8">
+       <attribute name="title">
+        <string>Task 8</string>
+       </attribute>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="p1_label_result">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>590</y>
+        <width>740</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Result</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="p1_btn_test">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>580</y>
+        <width>140</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Test</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="p1_btn_clearResult">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>620</y>
+        <width>140</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Clear</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="p1_btn_openTestFile">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>540</y>
+        <width>140</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Open Test File</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="p1_lineEdit_filePath">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>540</y>
+        <width>740</width>
+        <height>30</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>10</y>
+        <width>671</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Digital Signal Processing Tasks</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2"/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>981</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
