@@ -28,7 +28,7 @@ class DspGenerale:
         self.task5 = Task5(self, self.gui)
         self.task6 = Task6(self, self.gui)
         self.task7 = Task7(self, self.gui)
-        # self.task8 = Task8(self, self.gui)
+        self.task8 = Task8(self, self.gui)
 
         self.setupTask()
         self.gui.show()
@@ -143,5 +143,7 @@ class DspGenerale:
             self.task6.testResult()
         elif self.gui.p1_tabWidget.currentIndex() == 6:
             self.task7.testResult()
+        elif self.gui.p1_tabWidget.currentIndex() == 7:
+            self.task8.testResult()
         else:
             self.gui.p1_label_result.setText("Error: This Task not ready yet to test")
