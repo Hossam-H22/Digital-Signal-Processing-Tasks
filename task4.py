@@ -86,14 +86,7 @@ class Task4:
       self.gui.p1_t4_btn_saveTextFile.setEnabled(False)
 
   def DFT(self):
-    self.complexList = []
-    for i in range(self.N1):
-      item = complex(0, 0)
-      for j in range(self.N1):
-        power = (2* np.pi * i*j)/self.N1
-        newItem = complex(self.secondCoulmn[j] * np.cos(power), self.secondCoulmn[j] * np.sin(power) * -1)
-        item += newItem
-      self.complexList.append(item)
+    self.complexList = self.dsp_class.DFT(self.secondCoulmn)
 
     self.firstCoulmn=[]
     self.secondCoulmn=[]
@@ -116,14 +109,7 @@ class Task4:
       self.complexList.append(complex(real, imag))
       self.firstCoulmn[i] = i
 
-    for i in range(self.N1):
-      item = complex(0, 0)
-      for j in range(self.N1):
-        power = (2* np.pi * i*j)/self.N1
-        newItem = complex(np.cos(power), np.sin(power))
-        item += (newItem * self.complexList[j])
-      self.secondCoulmn[i] = np.round(item.real/self.N1, 1)
-
+    self.secondCoulmn = self.dsp_class.IDFT(self.complexList)
     self.isPeriodic = 0
     self.fill_table()
 

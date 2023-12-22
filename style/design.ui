@@ -1796,7 +1796,7 @@
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="p_tab_8">
+      <widget class="QWidget" name="p1_tab_8">
        <attribute name="title">
         <string>Task 8</string>
        </attribute>
@@ -2039,6 +2039,266 @@
           <string>Correlation</string>
          </property>
         </column>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="p1_tab_9">
+       <attribute name="title">
+        <string>Task 9</string>
+       </attribute>
+       <widget class="QPushButton" name="p1_t9_btn_openFile">
+        <property name="geometry">
+         <rect>
+          <x>830</x>
+          <y>20</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Open Signal File</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="p1_t9_comboBox_method">
+        <property name="geometry">
+         <rect>
+          <x>660</x>
+          <y>120</y>
+          <width>290</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>Choose Method ....</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Directed Method</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Fourier Method</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Fast Fourier Method</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="p1_t9_labelText_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>70</y>
+          <width>130</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Signal 2th Path:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t9_btn_openFile_2">
+        <property name="geometry">
+         <rect>
+          <x>830</x>
+          <y>70</y>
+          <width>120</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Open Signal File</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="p1_t9_flineEdit_filePath">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>20</y>
+          <width>650</width>
+          <height>30</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="p1_t9_comboBox_operationType">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>120</y>
+          <width>280</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>Choose Correlation Type ....</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Auto Correlation</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Cross Correlation</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Convolution</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLineEdit" name="p1_t9_flineEdit_filePath_2">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>70</y>
+          <width>650</width>
+          <height>30</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="p1_t9_btn_generateTable">
+        <property name="geometry">
+         <rect>
+          <x>840</x>
+          <y>170</y>
+          <width>110</width>
+          <height>110</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Generate Table</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="p1_t9_tableWidget">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>170</y>
+          <width>800</width>
+          <height>240</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>130</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Index-First</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Frequency-First</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Index-Second</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Frequency-Second</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Index-Correlation</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Correlation</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="p1_t9_btn_clearTable">
+        <property name="geometry">
+         <rect>
+          <x>840</x>
+          <y>300</y>
+          <width>110</width>
+          <height>110</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ClearTable</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="p1_t9_labelText">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>130</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Signal 1th Path:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="p1_t9_comboBox_outRange">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>120</y>
+          <width>290</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>Choose Out Range ....</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Normalized</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Not Normalized</string>
+         </property>
+        </item>
        </widget>
       </widget>
      </widget>

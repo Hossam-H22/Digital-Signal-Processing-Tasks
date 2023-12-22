@@ -1,4 +1,7 @@
 import numpy as np
+from matplotlib import pyplot as plt
+
+from test_scripts.task7_ConvTest import ConvTest
 from style.gui import CenteredTextLabel
 from test_scripts.task8_CompareSignal import Compare_Signals
 
@@ -100,49 +103,21 @@ class Task8:
           self.correlation.append(sum)
 
   def correlation_fast(self):
-      # Start DFT
-      self.complexList1 = []
-      self.complexList2 = []
-      for i in range(self.N1):
-          item1 = complex(0, 0)
-          item2 = complex(0, 0)
-          for j in range(self.N1):
-              power = (2 * np.pi * i * j) / self.N1
-              # compute complex sample of signal 1
-              newItem1 = complex(self.signalSamples1[j] * np.cos(power), self.signalSamples1[j] * np.sin(power) * -1)
-              item1 += newItem1
-
-              # compute complex sample of signal 2
-              newItem2 = complex(self.signalSamples2[j] * np.cos(power), self.signalSamples2[j] * np.sin(power) * -1)
-              item2 += newItem2
-
-          self.complexList1.append(item1)
-          self.complexList2.append(item2)
-      # End DFT
-
+      # DFT
+      self.complexList1 = self.dsp_class.DFT(self.signalSamples1)
+      self.complexList2 = self.dsp_class.DFT(self.signalSamples2)
 
       # conjugate first complex list
       for i in range(self.N1):
           self.complexList1[i] = complex(self.complexList1[i].real, self.complexList1[i].imag * -1)
-
 
       # X1*(K) . X2(K)
       self.complexListFinal = []
       for i in range(self.N1):
           self.complexListFinal.append(self.complexList1[i] * self.complexList2[i])
 
-
-
-      # Start IDFT
-      self.correlation = []
-      for i in range(self.N1):
-          item = complex(0, 0)
-          for j in range(self.N1):
-              power = (2 * np.pi * i * j) / self.N1
-              newItem = complex(np.cos(power), np.sin(power))
-              item += (newItem * self.complexListFinal[j])
-          self.correlation.append(np.round(item.real/self.N1, 1))
-      # End IDFT
+      # IDFT
+      self.correlation = self.dsp_class.IDFT(self.complexListFinal)
 
       # IDFT/N
       for i in range(self.N1):
@@ -151,7 +126,6 @@ class Task8:
   def normalization(self, shift):
       sum1=0
       sum2=0
-
       for i in range(self.N1):
           sum1 += np.power(self.signalSamples1[i], 2)
           secondPart = self.signalSamples2[(i+shift) % self.N1]
@@ -159,7 +133,6 @@ class Task8:
           sum2 += np.power(secondPart, 2)
 
       normalize = round((np.sqrt(sum1*sum2))/self.N1, 1)
-
       return normalize
 
   def clearTable(self):
@@ -192,4 +165,3 @@ class Task8:
       self.timeFinal = np.arange(0, self.N1)
       result_text = Compare_Signals(filePath, self.timeFinal, self.correlation)
       self.gui.p1_label_result.setText(result_text)
-

@@ -103,28 +103,14 @@ class Task6:
   def removeDC_DFT_IDFT(self):
       try:
           # DFT
-          self.complexList = []
-          for i in range(self.N1):
-              item = complex(0, 0)
-              for j in range(self.N1):
-                  power = (2 * np.pi * i * j) / self.N1
-                  newItem = complex(self.signalSamples[j] * np.cos(power), self.signalSamples[j] * np.sin(power) * -1)
-                  item += newItem
-              self.complexList.append(item)
+          self.complexList = self.dsp_class.DFT(self.signalSamples)
 
           self.complexList[0] = complex(0, 0)
 
-          self.newSignalSamples = np.zeros(self.N1)
           # IDFT
-          for i in range(self.N1):
-              item = complex(0, 0)
-              for j in range(self.N1):
-                  power = (2 * np.pi * i * j) / self.N1
-                  newItem = complex(np.cos(power), np.sin(power))
-                  item += (newItem * self.complexList[j])
-              self.newSignalSamples[i] = np.round(item.real / self.N1, 3)
-
+          self.newSignalSamples = self.dsp_class.IDFT(self.complexList, 3)
           self.newTime = self.time.copy()
+          
       except Exception as e:
           self.gui.p1_label_result.setText(e)
 
@@ -188,7 +174,6 @@ class Task6:
 
     if operationIndex==2 or operationIndex==3: result_text = DerivativeSignal()
     elif operationIndex==4 or operationIndex==5 or operationIndex==6:
-        print("heeeree")
         result_text = Shift_Fold_Signal(self.gui.p1_lineEdit_filePath.text(), self.newTime, self.newSignalSamples)
     else: result_text = SignalSamplesAreEqual(self.gui.p1_lineEdit_filePath.text(), self.newTime, self.newSignalSamples)
     self.gui.p1_label_result.setText(result_text)

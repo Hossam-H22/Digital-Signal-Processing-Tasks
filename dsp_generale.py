@@ -1,3 +1,4 @@
+import numpy as np
 from PyQt5 import QtWidgets
 from tkinter import filedialog
 import matplotlib.pyplot as plt
@@ -14,6 +15,7 @@ from task5 import Task5
 from task6 import Task6
 from task7 import Task7
 from task8 import Task8
+from task9 import Task9
 
 
 class DspGenerale:
@@ -29,6 +31,7 @@ class DspGenerale:
         self.task6 = Task6(self, self.gui)
         self.task7 = Task7(self, self.gui)
         self.task8 = Task8(self, self.gui)
+        self.task9 = Task9(self, self.gui)
 
         self.setupTask()
         self.gui.show()
@@ -124,6 +127,32 @@ class DspGenerale:
         except Exception as e:
             self.gui.p1_label_result.setText(f"Error An error occurred while saving the file: {str(e)}")
 
+    def DFT(self, signalSamples):
+        complexList = []
+        N = len(signalSamples)
+        for i in range(N):
+            item = complex(0, 0)
+            for j in range(N):
+                power = (2 * np.pi * i * j) / N
+                newItem = complex(signalSamples[j] * np.cos(power), signalSamples[j] * np.sin(power) * -1)
+                item += newItem
+
+            complexList.append(item)
+        return complexList
+
+    def IDFT(self, complexList, decimalDigits=1):
+        signalSamples = []
+        N = len(complexList)
+        for i in range(N):
+            item = complex(0, 0)
+            for j in range(N):
+                power = (2 * np.pi * i * j) / N
+                newItem = complex(np.cos(power), np.sin(power))
+                item += (newItem * complexList[j])
+            signalSamples.append(np.round(item.real / N, decimalDigits))
+
+        return signalSamples
+
     def testResults(self):
         if len(self.gui.p1_lineEdit_filePath.text()) == 0:
             self.gui.p1_label_result.setText("Error: Please Choose Test File")
@@ -145,5 +174,9 @@ class DspGenerale:
             self.task7.testResult()
         elif self.gui.p1_tabWidget.currentIndex() == 7:
             self.task8.testResult()
+        elif self.gui.p1_tabWidget.currentIndex() == 8:
+            self.task9.testResult()
         else:
             self.gui.p1_label_result.setText("Error: This Task not ready yet to test")
+
+
